@@ -35,14 +35,15 @@ public class Main {
 
         int contFaltas = 0;
         List<Integer> faltas = new ArrayList<>();
-        System.out.println("Digite quantas faltas cada aluno teve em ordem");
-        System.out.print("Assim: na primeira linha você irá digitar as faltas do primeiro aluno contabilizado: ");
+        System.out.println("Digite quantas faltas cada aluno teve em ordem.");
         int falta;
         for (int i = 0; i < N; i++) {
+            System.out.print(nomes.get(i) + ": ");
             falta = Integer.parseInt(scanner.next());
             faltas.add(falta);
             contFaltas = contFaltas + faltas.get(i);
         }
+        System.out.println(" ");
         System.out.println("----- Diário de classe no mês de " + meses.get(mes) + " -----");
         System.out.println("Alunos: " + nomes);
         System.out.println("Faltas de cada aluno:");
